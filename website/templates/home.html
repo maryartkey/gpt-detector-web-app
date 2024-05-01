@@ -1,18 +1,20 @@
 {% extends "base.html" %}
 <title>{% block title %}Home{% endblock %}</title>
-<body> 
+
     {% block content %}
-    <div>
+    <div class="container-item-left">
     <form method="POST">
         <textarea class="form-control" rows="5" id="textarea" name="textarea"></textarea>
         <!-- <a href="/text" class="btn btn-info" id="submit" name="submit" role="button">Submit</a> -->
-        <input type="submit" value="Submit">
+        <input class="submit" type="submit" value="Submit">
         <div><h1>{{text_data}}</h1></div>
       </form>
-      
+    </div> 
+    <div class="container-item-right">
+      <textarea rows="10" id="textarea" name="textarea"></textarea>
+    </div>
     {% endblock %}
-</div>
+
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
 
-</body>
