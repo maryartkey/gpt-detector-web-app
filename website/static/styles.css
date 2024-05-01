@@ -1,0 +1,71 @@
+body {
+    background-color: #fbfbfb;
+  }
+  @media (min-width: 600px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+
+  form {
+    position: relative;
+    left: 240px;
+    width: 940px;
+  }
+
+  .about-text {
+    position: relative;
+    left: 260px;
+    top: 50px;
+    width: 940px;
+  }
+  .h1-about {
+    position: static;
+
+  }
+  .submit {
+    position: fixed;
+    left: 240px;
+    width: 940px;
+  }
+
+  h1 {
+    position: fixed;
+    top: 300px;
+    left: 300px;
+  }
+  h2 {
+    position: fixed;
+    top: 320px;
+    left: 300px;
+  }
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 200px;
+    z-index: 600;
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }

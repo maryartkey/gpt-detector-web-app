@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+<title>{% block title %}About{% endblock %}</title>
+<body> 
+    {% block content %}
+    <div class="flexbox-container">
+        <div class="flexbox-item about-text">
+            <h1 class="h1-about">About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nibh erat, finibus id eleifend non, cursus laoreet mauris. Aenean ut commodo tortor. Integer accumsan ultrices libero non mattis. Morbi eleifend nunc neque, ornare tincidunt eros interdum in. Ut turpis leo, vehicula non nulla et, volutpat consectetur dolor. Pellentesque egestas finibus ornare. Nullam sed laoreet nisi.</p>
+            <p>Suspendisse nec dui a eros pretium pharetra. Integer eget ante accumsan, semper felis vitae, suscipit massa. Praesent eget purus quis elit eleifend imperdiet vitae vel mauris. Maecenas turpis velit, accumsan aliquam dignissim nec, egestas at ipsum. Nullam ac dui eget mauris porta cursus. Mauris suscipit purus id nulla molestie, eget feugiat dui dignissim. Nunc sed efficitur nibh.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt arcu non est scelerisque, vel sagittis nisl consectetur. Nulla convallis eros in felis pharetra, quis semper ex tempus. In vitae dolor efficitur dolor suscipit sodales at id libero. Vivamus ut nibh odio. Suspendisse varius neque lorem, sit amet hendrerit lectus tincidunt a. Ut purus est, pulvinar non semper vel, aliquet ac turpis. Praesent eget elit at risus vestibulum venenatis at quis lectus. Nullam fringilla id enim eget semper. Cras iaculis, orci ut ultrices accumsan, lacus ligula feugiat tellus, vel dapibus lectus nunc sed nibh. Suspendisse sed vestibulum diam. Donec id sollicitudin turpis. Pellentesque blandit luctus dolor et tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non vehicula arcu.</p>
+            <p>Ut sed mauris a ligula tempus vestibulum ut ac arcu. Aliquam lacinia ipsum eget tincidunt sagittis. Sed tristique, nisi quis tincidunt venenatis, urna sapien fringilla nisi, sed dignissim ipsum quam et nibh. Fusce vulputate finibus viverra. Suspendisse placerat mi eu mi luctus auctor. Nullam ultricies, nisi non posuere molestie, nisl augue consectetur odio, ac rhoncus magna neque nec mauris. Vivamus eget odio in dolor pulvinar fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam interdum consequat ultricies. Nunc non neque ultricies, consectetur ex id, imperdiet ligula. In varius congue est sit amet aliquam. Vestibulum porttitor blandit nisi vel faucibus. Phasellus gravida facilisis velit nec pharetra. Sed volutpat nulla ut ante facilisis iaculis. Nullam egestas nec erat nec pellentesque.</p>
+            <p>Suspendisse erat nisi, luctus et molestie nec, porttitor ac felis. Mauris sed fringilla purus, ut tempor diam. Nulla egestas pharetra commodo. Suspendisse non auctor tortor. Nam nisl turpis, accumsan eu magna eget, congue hendrerit augue. In vestibulum augue at tempor condimentum. Integer consectetur sem eget dui mollis venenatis.</p>
+        </div>
+    </div>
+    {% endblock %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</body>
