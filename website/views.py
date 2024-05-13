@@ -221,12 +221,16 @@ def home():
         input = pd.DataFrame(values_dict, index=[0])
         print(values_dict)
         prediction = regr.predict(input[0:1])
-        generated = 0
         if prediction == ['human']:
             output_text = 'Текст, скорее всего, написан человеком.'
+            generated = 0
         else:
             output_text = 'Похоже, что это сгенерированный текст.'
+            generated = 1
+
         print(output_text)
+        print(prediction)
+
 
         return render_template("text.html", user=current_user, text_data=text_data, output_text=output_text, generated=generated)
     

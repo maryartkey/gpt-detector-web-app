@@ -10,7 +10,7 @@
     {% endblock %}
 
     {% block content_right %}
-    {% if output_text != 'Текст, скорее всего, написан человеком.' %}
+    {% if generated == 1 %}
       <!-- <textarea class="text-data-output-red"  readonly>{{output_text}}</textarea> -->
     <div class = "text-data-output-red">{{output_text}}</div>
 
