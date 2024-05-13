@@ -26,13 +26,9 @@
         <a href="/"
           class="list-group-item list-group-item-action py-2 ripple"
           aria-current="true">
-          <i class="fas fa-fw me-3"></i><span>Home</span></a>
+          <i class="fas fa-fw me-3"></i><span>Домой</span></a>
         <a href="/about" class="list-group-item list-group-item-action py-2 ripple">
-          <i class="fas fa-fw me-3"></i><span>About</span></a>
-        <a href="/api" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-fw me-3"></i><span>API</span></a>
-        <a href="/faq" class="list-group-item list-group-item-action py-2 ripple"
-          ><i class="fas fa-fw me-3"></i><span>FAQ</span></a>        
+          <i class="fas fa-fw me-3"></i><span>О продукте</span></a>         
       </div>
     </div>
   </nav>
@@ -64,42 +60,6 @@
       </a>      
 
       <!-- Right links -->
-      <ul class="navbar-nav ms-auto d-flex flex-row">
-        
-        <!-- Avatar -->
-        <li class="nav-item dropdown">
-          <a
-            data-mdb-dropdown-init class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-              class="rounded-circle"
-              height="22"
-              alt="Avatar"
-              loading="lazy"
-            />
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">My profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Settings</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Logout</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
     </div>
     <!-- Container wrapper -->
   </nav>
@@ -128,24 +88,7 @@
             </div>
           </nav> -->
       <body style="margin-top: 58px;">   
-          <!-- <div>
-            {% with messages = get_flashed_messages(with_categories=true) %} {% if
-                messages %} {% for category, message in messages %} {% if category ==
-                'error' %}
-                <div class="alert alert-danger alter-dismissable fade show" role="alert">
-                  {{ message }}
-                  <button type="button" class="close" data-dismiss="alert">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                {% else %}
-                <div class="alert alert-success alter-dismissable fade show" role="alert">
-                  {{ message }}
-                  <button type="button" class="close" data-dismiss="alert">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                {% endif %} {% endfor %} {% endif %} {% endwith %} -->
+          
         <div class="container">
         {% block content %}
 

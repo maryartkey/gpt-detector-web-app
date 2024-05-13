@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="https://i.ibb.co/6smHyTh/Removal-496.png"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <title>{% block title %}Home{% endblock %}</title>
+    </head>
+  <div class="container-main">
+    <div class="main-top">
+        <div class="logo">
+            <a class="navbar-brand" href="/">
+                <img
+                src="https://i.ibb.co/6smHyTh/Removal-496.png"
+                height="40"
+                alt="Logo"
+                loading="lazy"/>
+            </a>
+        </div>
+        
+    </div>
+    <div class="main-middle">
+      <div class="main-middle-top">
+        <div class="left-area">
+            <div class="list-group list-group-flush mx-3">
+                <a href="/" class="list-group-item">
+                  <i class="fas"></i><span>Домой</span></a>
+                 
+            </div>
+        </div>
+        <div class="middle-area">
+            {% block content_middle %}
+
+            {% endblock %} 
+        </div>
+        <div class="right-area">
+
+        {% block content_right %}
+        {% endblock %} 
+        </div>
+      </div>
+      <div class="main-middle-bottom">
+        {% block content_middle_bottom %}
+
+            {% endblock %} 
+
+      </div>
+
+    </div>
+    <div class="main-bottom">
+        
+    </div>
+    <body>               
+      
+        <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">    
+  
+  </body>
+  </div>
+</html>

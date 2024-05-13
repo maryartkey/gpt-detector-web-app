@@ -1,18 +1,17 @@
-{% extends "base.html" %}
+{% extends "tmp-base.html" %}
 <title>{% block title %}Home{% endblock %}</title>
 
-    {% block content %}
-    <div class="container-item-left">
+    {% block content_middle %}
     <form method="POST">
-        <textarea class="form-control" rows="5" id="textarea" name="textarea"></textarea>
-        <!-- <a href="/text" class="btn btn-info" id="submit" name="submit" role="button">Submit</a> -->
-        <input class="submit" type="submit" value="Submit">
+        <textarea class="text-main" rows="15" id="textarea" name="textarea" autofocus></textarea>
+        <input class="submit" type="submit" value="Проверить текст">
         <div><h1>{{text_data}}</h1></div>
       </form>
-    </div> 
-    <div class="container-item-right">
-      <textarea rows="10" id="textarea" name="textarea"></textarea>
-    </div>
+
+    {% endblock %}
+
+    {% block content_right %}
+      <textarea class="text-data" readonly></textarea>
     {% endblock %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
