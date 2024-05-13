@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+<title>{% block title %}Text{% endblock %}</title>
+  
+  {% block content %}
+  <main>
+  <ul class="list-group list-group-flush" id="texts"></ul>
+        {% for text in user.texts %}
+        <li class="list-group-item">
+          {{ text.data }}
+          {{prediction}}
+        </li>
+        {% endfor %}
+      </ul> 
+    </main>
+  {% endblock %}
+
+    

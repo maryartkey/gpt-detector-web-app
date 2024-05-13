@@ -1,17 +1,26 @@
-{% extends "base.html" %}
-<title>{% block title %}Text{% endblock %}</title>
-  
-  {% block content %}
-  <main>
-  <ul class="list-group list-group-flush" id="texts"></ul>
-        {% for text in user.texts %}
-        <li class="list-group-item">
-          {{ text.data }}
-          {{tmp}}
-        </li>
-        {% endfor %}
-      </ul> 
-    </main>
-  {% endblock %}
+{% extends "tmp-base.html" %}
+<title>{% block title %}Home{% endblock %}</title>
 
-    
+    {% block content_middle %}
+    <form method="POST">
+        <textarea class="text-main" rows="15" id="textarea" name="textarea" autofocus>{{text_data}}</textarea>
+        <input class="submit" type="submit" value="Проверить текст">
+      </form>
+
+    {% endblock %}
+
+    {% block content_right %}
+    {% if output_text != 'Текст, скорее всего, написан человеком.' %}
+      <!-- <textarea class="text-data-output-red"  readonly>{{output_text}}</textarea> -->
+    <div class = "text-data-output-red">{{output_text}}</div>
+
+    {% else %}
+    <!-- <textarea class="text-data-output-green"  readonly>{{output_text}}</textarea> -->
+    <div class = "text-data-output-green">{{output_text}}</div>
+    {% endif %}
+      
+    {% endblock %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
