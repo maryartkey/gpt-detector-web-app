@@ -360,12 +360,6 @@ class TextGroup:
 
 def main():
     print("Enter main.")
-
-    # text_nat_semi = pd.read_excel('../all_essays_natural_semi.xlsx')
-    # text_art_semi = pd.read_excel('../all_essays_artificial_semi.xlsx')
-    # text_nat_lemma = pd.read_excel('../all_essays_natural_lemma.xlsx')
-    # text_art_lemma = pd.read_excel('../all_essays_artificial_lemma.xlsx')
-
     text_nat_semi = pd.read_excel('text_nat_semi_w_values_new.xlsx')
     text_art_semi = pd.read_excel('text_art_semi_w_values_new.xlsx')
     text_group_art_semi = TextGroup(text_art_semi)
@@ -373,99 +367,6 @@ def main():
     text_group_art_semi.plot_double_hist('colon_count', text_nat_semi["colon_count"], 'colon_count', text_art_semi["colon_count"])
     text_group_art_semi.plot_double_hist('semicolon_count', text_nat_semi["semicolon_count"], 'semicolon_count', text_art_semi["semicolon_count"])
 
-    # text_nat_lemma = pd.read_excel('../all_essays_natural_lemma.xlsx')
-    # text_art_lemma = pd.read_excel('../all_essays_artificial_lemma.xlsx')
-
-    # text_group_nat_lemma = TextGroup(text_nat_lemma)   
-    # text_group_art_lemma = TextGroup(text_art_lemma)    
-
-    # values_nat_rank = text_group_nat_lemma.get_average_rank()
-    # values_art_rank = text_group_art_lemma.get_average_rank()
-
-    # text_nat_lemma['rank'] = values_nat_rank
-    # text_art_lemma['rank'] = values_art_rank
-
-    # text_group_art_lemma.plot_double_hist('text_nat_lemma', values_nat_rank, 'text_art_lemma', values_art_rank)
-
-
-    # text_group_nat_semi = TextGroup(text_nat_semi)
-    # text_group_nat_lemma = TextGroup(text_nat_lemma)    
-    
-    # values_nat_mean_w_len = text_group_nat_semi.get_mean_word_length()
-    # values_nat_stdev_w_len = text_group_nat_semi.get_stdev_word_lengths()
-    # values_nat_mean_sent_len = text_group_nat_semi.get_mean_sentence_length()
-    # values_nat_stdev_sent_len = text_group_nat_semi.get_stdev_sentence_lengths()
-    # values_nat_dots = text_group_nat_semi.get_dots_count()
-    # values_nat_commas = text_group_nat_semi.get_commas_count()
-    # values_nat_excpts = text_group_nat_semi.get_excpoints_count()
-    # values_nat_qmarks = text_group_nat_semi.get_questmarks_count()
-    # values_nat_semicolons = text_group_nat_semi.get_semicolons_count()
-    # values_nat_colons = text_group_nat_semi.get_colons_count()
-    # values_nat_rank = text_group_nat_lemma.get_average_rank()
-    # values_nat_homogeneity = text_group_nat_lemma.get_homogeneity()
-    # values_nat_nouns, values_nat_verbs, values_nat_adj, values_nat_adv = text_group_nat_lemma.get_pos_count()
-
-
-    # text_nat_semi['mean_word_len'] = values_nat_mean_w_len
-    # text_nat_semi['stdev_word_len'] = values_nat_stdev_w_len
-    # text_nat_semi['mean_sent_len'] = values_nat_mean_sent_len
-    # text_nat_semi['stdev_sent_len'] = values_nat_stdev_sent_len
-    # text_nat_semi['dot_count'] = values_nat_dots
-    # text_nat_semi['comma_count'] = values_nat_commas
-    # text_nat_semi['excpoint_count'] = values_nat_excpts
-    # text_nat_semi['qmark_count'] = values_nat_qmarks
-    # text_nat_semi['semicolon_count'] = values_nat_semicolons
-    # text_nat_semi['colon_count'] = values_nat_colons
-    # text_nat_semi['rank'] = values_nat_rank
-    # text_nat_semi['homogeneity'] = values_nat_homogeneity
-    # text_nat_semi['noun'] = values_nat_nouns
-    # text_nat_semi['verb'] = values_nat_verbs
-    # text_nat_semi['adj'] = values_nat_adj
-    # text_nat_semi['adv'] = values_nat_adv
-
-    # text_nat_semi.to_excel("text_nat_semi_w_values_new.xlsx")
-
-    # text_group_art_semi = TextGroup(text_art_semi)
-    # text_group_art_lemma = TextGroup(text_art_lemma)
-
-    # values_art_mean_w_len = text_group_art_semi.get_mean_word_length()
-    # values_art_stdev_w_len = text_group_art_semi.get_stdev_word_lengths()
-    # values_art_mean_sent_len = text_group_art_semi.get_mean_sentence_length()
-    # values_art_stdev_sent_len = text_group_art_semi.get_stdev_sentence_lengths()
-    # values_art_dots = text_group_art_semi.get_dots_count()
-    # values_art_commas = text_group_art_semi.get_commas_count()
-    # values_art_excpts = text_group_art_semi.get_excpoints_count()
-    # values_art_qmarks = text_group_art_semi.get_questmarks_count()
-    # values_art_semicolons = text_group_art_semi.get_semicolons_count()
-    # values_art_colons = text_group_art_semi.get_colons_count()
-    # values_art_rank = text_group_art_lemma.get_average_rank()
-    # values_art_homogeneity = text_group_art_lemma.get_homogeneity()
-    # values_art_nouns, values_art_verbs, values_art_adj, values_art_adv = text_group_art_lemma.get_pos_count()
-
-    # text_art_semi['mean_word_len'] = values_art_mean_w_len
-    # text_art_semi['stdev_word_len'] = values_art_stdev_w_len
-    # text_art_semi['mean_sent_len'] = values_art_mean_sent_len
-    # text_art_semi['stdev_sent_len'] = values_art_stdev_sent_len
-    # text_art_semi['dot_count'] = values_art_dots
-    # text_art_semi['comma_count'] = values_art_commas
-    # text_art_semi['excpoint_count'] = values_art_excpts
-    # text_art_semi['qmark_count'] = values_art_qmarks
-    # text_art_semi['semicolon_count'] = values_art_semicolons
-    # text_art_semi['colon_count'] = values_art_colons
-    # text_art_semi['rank'] = values_art_rank
-    # text_art_semi['homogeneity'] = values_art_homogeneity
-    # text_art_semi['noun'] = values_art_nouns
-    # text_art_semi['verb'] = values_art_verbs
-    # text_art_semi['adj'] = values_art_adj
-    # text_art_semi['adv'] = values_art_adv
-
-    # text_art_semi.to_excel("text_art_semi_w_values_new.xlsx")
-
-    # datasets = [text_nat_semi, text_art_semi]
-    # dataset_for_training_art_nat_all_values = pd.concat(datasets)
-    # dataset_for_training_art_nat_all_values.to_excel("dataset_for_training_art_nat_all_values_new.xlsx")
-    
-    # text_group_nat_semi.plot_double_hist('mean_word_length', values_nat, 'mean_word_length', values_art)
       
 if __name__ == "__main__":
     main()
