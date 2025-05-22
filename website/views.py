@@ -12,7 +12,7 @@ from collections import Counter
 import pickle
 import joblib
 
-with open('model_nohomo.pkl', 'rb') as f:
+with open('model.pkl', 'rb') as f:
     regr = pickle.load(f)
 
 class TextGroup:
